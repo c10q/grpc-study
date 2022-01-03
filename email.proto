@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package main;
+
+service Mail {
+  rpc SendMail (MailRequest) returns (MailReply);
+}
+
+message MailRequest {
+  string from = 1;
+  string to = 2;
+  string content = 3;
+}
+
+message MailReply {
+  bool success = 1;
+}
