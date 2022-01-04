@@ -5,15 +5,15 @@ package email;
 option go_package = "./email";
 
 service Mail {
-  rpc SendMail (MailRequest) returns (MailReply);
+  rpc Send (SendRequest) returns (SendReply);
 }
 
-message MailRequest {
+message SendRequest {
   string from = 1;
   string to = 2;
   string content = 3;
 }
 
-message MailReply {
+message SendReply {
   bool success = 1;
 }
