@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-package main;
+package email;
+
+option go_package = "./email";
 
 service Mail {
   rpc SendMail (MailRequest) returns (MailReply);
